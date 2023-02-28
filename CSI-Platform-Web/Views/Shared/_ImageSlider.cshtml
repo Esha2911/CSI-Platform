@@ -1,0 +1,26 @@
+﻿<div class="h-100 d-flex flex-column justify-content-between">
+    <img src="~/images/CSR-initiative-stands-for-Coffee--and-Farmer-Equity-2.png" id="image-area" class="w-100 h-100 d-none d-lg-block" />
+    <div class="slider slider-nav m-0 mt-1">
+        <div class="me-1"><img src="~/images/CSR-initiative-stands-for-Coffee--and-Farmer-Equity-2.png" class="w-100" height="120" role="img" onclick="display(this)"></div>
+        <div class="me-1"><img src="~/images/image1.png" class="w-100" height="120" role="img" onclick="display(this)"></div>
+        <div class="me-1"><img src="~/images/img1.png" class="w-100" height="120" role="img" onclick="display(this)"></div>
+        <div class="me-1"><img src="~/images/img11.png" class="w-100" height="120" role="img" onclick="display(this)"></div>
+        <div class="me-1"><img src="~/images/Plantation-and-Afforestation-programme-1.png" class="w-100" width="175" height="120" role="img" onclick="display(this)"></div>
+    </div>
+</div>
+
+<script>
+    let slider = document.getElementsByClassName("slider-nav");
+
+    $(".slider-nav").slick({
+        slidesToShow: 4,
+        slidesToScroll: 1,
+        prevArrow:"<button class='position-absolute z-1 p-0 h-100 bg-black bg-opacity-50'><img class='ps-2 pe-2' src='~/images/left1.png'></button>",
+        nextArrow:"<button class='position-absolute z-1 p-0 h-100 bg-black bg-opacity-50 top-0 end-0'><img class='ps-2 pe-2' src='~/images/right-arrow2.png'></button>",
+    });
+
+    function display(item) {
+      let image = document.getElementById("image-area");
+      image.src = item.src;
+    }
+</script>

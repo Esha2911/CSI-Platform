@@ -1,0 +1,57 @@
+﻿@{
+    ViewData["Title"] = "Volunteering Mission Page";
+}
+<partial name="_Header" />
+
+<div class="content-width mb-5">
+    <div class="row mt-4">
+        <div class="col-lg-6">
+            <partial name="_ImageSlider" />
+        </div>
+        <div class="col-lg-6">
+            <partial name="_Rating" />
+        </div>
+    </div>
+    <div class="row mt-4">
+        <div class="col-lg-8">
+            <div class="m-3">
+                <ul class="nav border-bottom ps-2" id="missiontab">
+                    <li class="nav-item">
+                        <a href="#mission-content" class="nav-link active light-gray" data-bs-toggle="tab" id="mission">Mission</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#organization-content" class="nav-link light-gray" data-bs-toggle="tab" id="organization">Organization</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#comments-content" class="nav-link light-gray" data-bs-toggle="tab" id="comments">Comments</a>
+                    </li>
+                </ul>
+                <div class="tab-content">
+                    <div class="tab-pane fade show active" id="mission-content">
+                        <partial name="_MissionTab" />
+                    </div>
+                    <div class="tab-pane fade" id="organization-content">
+                        <partial name="_OrganizationTab"/>
+                    </div>
+                    <div class="tab-pane fade" id="comments-content">
+                        <partial name="_CommentTab"/>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-4">
+            <div class="row m-1">
+                <partial name="_MissionInformation" />
+            </div>
+            <div class="row m-1 mt-5">
+                <partial name="_RecentVolunteer"/>
+            </div>
+        </div>
+    </div>
+</div>
+<hr/>
+<div class="content-width mt-5">
+    <div class="fs-3 text-center">Related Missions</div>
+    <partial name="_GridCard"/>
+</div>
+
